@@ -7,4 +7,3 @@ A sleek and modern take on the classic game of Tic-Tac-Toe. Built using Bootstra
 - **Responsive Design**: Looks great on both desktop and mobile devices.
 - **Interactive UI**: Get immediate feedback with smooth transitions and intuitive game flow.
 - **Switchable Starting Player**: After every game, the starting player alternates, ensuring fair play.
-- **Winning Highlight**: Easily identify the winning line when someone secures a win.
