@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stopwatch</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <div class="container d-flex justify-content-center align-items-center" style="height: 100vh;">
+        <div class="row w-25 justify-content-center text-center g-1">
+            <div class="display fs-3">00:00:00:00</div>
+            <button class="start btn btn-dark text-uppercase">Start</button>
+            <button class="stop btn btn-dark text-uppercase">Stop</button>
+            <button class="reset btn btn-dark text-uppercase">Reset</button>
+        </div>
+    </div>
+    <script>
+        let startTime = null;
+        let timer = null;
+        let hours = 0;
+        let minutes = 0;
+        let seconds = 0;
+        let centiseconds = 0;
+    
+        const startButton = document.querySelector('.start');
+        const stopButton = document.querySelector('.stop');
+        const resetButton = document.querySelector('.reset');
+        const display = document.querySelector('.display');
+    
+        function startTimer() {
+            startButton.disabled = true;
+            if (timer === null) {
+                startTime = performance.now() - (hours * 3600000 + minutes * 60000 + seconds * 1000 + centiseconds * 10);
+            }
+            timer = setInterval(() => {
+                let elapsed = performance.now() - startTime;
+                centiseconds = Math.floor(elapsed / 10) % 100;
+                seconds = Math.floor(elapsed / 1000) % 60;
+                minutes = Math.floor(elapsed / (1000 * 60)) % 60;
+                hours = Math.floor(elapsed / (1000 * 60 * 60));
+                display.textContent = hours.toString().padStart(2, '0') + ':' +
+                    minutes.toString().padStart(2, '0') + ':' +
+                    seconds.toString().padStart(2, '0') + ':' +
+                    centiseconds.toString().padStart(2, '0');
+            }, 10);
+        }
+    
+        function stopTimer() {
+            clearInterval(timer);
+            timer = null;
+            startButton.disabled = false;
+        }
+    
+        function resetTimer() {
+            clearInterval(timer);
+            timer = null;
+            hours = 0;
+            minutes = 0;
+            seconds = 0;
+            centiseconds = 0;
+            display.textContent = '00:00:00:00';
+            startButton.disabled = false;
+        }
+    
+        startButton.addEventListener('click', startTimer);
+        stopButton.addEventListener('click', stopTimer);
+        resetButton.addEventListener('click', resetTimer);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
