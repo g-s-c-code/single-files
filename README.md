@@ -1,6 +1,6 @@
-# LoTR Dice Roller
+# LoTR Risk Battle Simulator
 
-A simple, single-file application created with HTML, JavaScript, and Bootstrap 5. This application serves as a virtual dice roller for the board game "The Lord of the Rings Risk." If you've lost one of the dice for your physical game (like I did...), this app can step in to fill the void.
+A simple, single-file application created with HTML, JavaScript, and Bootstrap 5. This application serves as a virtual dice roller for the board game Risk: The Lord of the Rings Ed. If you've lost one of the dice for your physical game (like I did...), this app can step in to fill the void.
 
 ## Features
 - Single file: Just download the HTML file, open it in the web browser of your choice and you are ready to go.
