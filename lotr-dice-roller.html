@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoTR Risk Dice Roller</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <img src="lotr.jpg" class="img-fluid" alt="Lord of the Rings Image">
+        <div class="position-absolute top-50 start-0 d-flex justify-content-center align-items-center mt-5">
+            <div class="container my-5">
+                <div class="col"></div>
+            <div class="container bg-dark text-white rounded w-75">
+
+                <div class="row mt-5">
+                    <div class="col p-2">
+                        <label for="attacker-dice" class="form-label">No. of Attacker Dice:</label>
+                        <select id="attacker-dice" class="form-select">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                    </div>
+                    <div class="col p-2">
+                        <label for="defender-dice" class="form-label">No. of Defender Dice:</label>
+                        <select id="defender-dice" class="form-select">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <div class="col">
+                    <button id="roll-button" class="btn btn-primary">ROLL!</button>
+                </div>
+            </div>
+                <div class="row">
+                    <div class="col">
+                    <div id="result" class="alert alert-danger"></div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+</div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById("roll-button").addEventListener("click", function() {
+            const attackerDiceCount = parseInt(document.getElementById("attacker-dice").value);
+            const defenderDiceCount = parseInt(document.getElementById("defender-dice").value);
+            
+            const attackerRolls = [];
+            const defenderRolls = [];
+            
+            for (let i = 0; i < attackerDiceCount; i++) {
+                attackerRolls.push(Math.floor(Math.random() * 6) + 1);
+            }
+            
+            for (let i = 0; i < defenderDiceCount; i++) {
+                defenderRolls.push(Math.floor(Math.random() * 6) + 1);
+            }
+            
+            attackerRolls.sort((a, b) => b - a);
+            defenderRolls.sort((a, b) => b - a);
+            
+            let attackerCasualties = 0;
+            let defenderCasualties = 0;
+            
+            for (let i = 0; i < Math.min(attackerDiceCount, defenderDiceCount); i++) {
+                if (attackerRolls[i] > defenderRolls[i]) {
+                    defenderCasualties++;
+                } else {
+                    attackerCasualties++;
+                }
+            }
+            
+            const resultMessage = `Attacker rolled: [${attackerRolls.join(", ")}]<br>Defender rolled: [${defenderRolls.join(", ")}]<br>Casualties - Attacker: ${attackerCasualties}, Defender: ${defenderCasualties}`;
+            document.getElementById("result").innerHTML = resultMessage;
+        });
+    </script>
+</body>
+</html>
