@@ -24,7 +24,7 @@
         /* Medium screens */
         @media (min-width: 768px) and (max-width: 992px) {
             * {
-                font-size: 14px;
+                font-size: 12px;
             }
         }
 
@@ -53,32 +53,32 @@
                 <div class="container d-flex flex-column align-items-center">
                     <div class="row">
                         <div class="col">
-                            <h1 class="card-title fw-bold text-center m-0 fst-italic"><span class="display-2">B</span>attle <span class="display-2">S</span>imulator</h1>
+                            <h1 class="card-title fw-bold text-center fst-italic border-bottom border-dark m-0"><span class="display-4">B</span>attle <span class="display-4">S</span>imulator</h1>
                             <div class="text-center"><span><p class="fst-italic m-0"><span>- for Risk: Lord of the Rings Ed. -</span></p></div>
                             <table class="table-borderless mt-3">
                                 <thead>
-                                <tr>
+                                <tr class="text-center">
                                     <th scope="col"></th>
-                                    <th scope="col">Attacker</th>
-                                    <th scope="col">Defender</th>
+                                    <th scope="col" style="width: 4.5rem;">Attacker</th>
+                                    <th scope="col" style="width: 4.5rem;">Defender</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th>⚔️ +1 bonus:<span style="color:#430000;">*</span></th>
+                                        <th class="text-end">+1 bonus<span style="color:#430000;">*</span> ⚔️</th>
                                         <td>
                                             <div class="form-switch">
-                                                <input type="checkbox" id="attacker-leader" class="form-check-input">
+                                                <input type="checkbox" id="attacker-leader" style="width: 2.5rem;" class="form-check-input">
                                             </div>
                                         </td>
                                         <td>
                                             <div class="form-switch">
-                                                <input type="checkbox" id="defender-leader" class="form-check-input">
+                                                <input type="checkbox" id="defender-leader" style="width: 2.5rem;" class="form-check-input ">
                                             </div>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>🎲 No. of dice:</th>
+                                        <th class="text-end">No. of dice 🎲</th>
                                         <td>
                                             <select id="attacker-dice" class="form-select form-select-sm">
                                                 <option value="1">1</option>
@@ -94,23 +94,23 @@
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th>🏹 Rolls:</th>
-                                        <td id="attacker-rolls"></td>
-                                        <td id="defender-rolls"></td>
+                                        <th class="text-end">Rolls 🏹</th>
+                                        <td class="text-center fw-bold" id="attacker-rolls"></td>
+                                        <td class="text-center fw-bold" id="defender-rolls"></td>
                                     </tr>
                                     <tr>
-                                        <th style="color:#430000;">💀 Casualties:</th>
-                                        <td id="attacker-casualties" style="color:#430000;"></td>
-                                        <td id="defender-casualties" style="color:#430000;"></td>
+                                        <th style="color:#430000;" class="text-end">Casualties 💀</th>
+                                        <td class="text-center fw-bold" id="attacker-casualties" style="color:#430000;"></td>
+                                        <td class="text-center fw-bold" id="defender-casualties" style="color:#430000;"></td>
                                     </tr>
                                     <tr class="text-center">
                                         <td colspan="3">
-                                            <button id="roll-button" style="color:#50554E;" class="fs-5 badge">ROLL</button>
+                                            <button id="roll-button" style="color:#50554E;" class="fs-5 badge w-100">ROLL</button>
                                         </td>
                                     </tr>
                                     <tr class="text-center">
                                         <td colspan="3">
-                                            <small class="fst-italic text-muted"><span style="color:#430000;">*</span>Asign this bonus if a player has a leader or a fortress.</small>
+                                            <small class="fst-italic text-muted"><span style="color:#430000;">*</span>If a player has a leader or a fortress.</small>
                                         </td>
                                     </tr>
                                 </tbody>
