@@ -4,7 +4,8 @@ A simple, single-file application created with HTML, JavaScript, and Bootstrap 5
 
 ## Features
 - Single file: Just download the HTML file, open it in the web browser of your choice and you are ready to go.
+- Responsive: Works great on any screen-size.
 - Roll virtual dice for the attacker and defender.
 - The app automatically determines casualties.
 - Select the number of dice for both the attacker and defender.
-- Option to add a +1 "leader" bonus to either the attacker or defender, or grant the defender a +1 bonus for being in a fortress.
+- Option to add a +1 for "leader" or "fortress" bonus.
