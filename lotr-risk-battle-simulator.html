@@ -65,7 +65,7 @@
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <th class="text-end">+1 bonus<span style="color:#430000;">*</span> ⚔️</th>
+                                        <th class="text-end">+1 bonus<span style="color:#430000;">*</span> 🏹</th>
                                         <td>
                                             <div class="form-switch">
                                                 <input type="checkbox" id="attacker-leader" style="width: 2.5rem;" class="form-check-input">
@@ -80,21 +80,21 @@
                                     <tr>
                                         <th class="text-end">No. of dice 🎲</th>
                                         <td>
-                                            <select id="attacker-dice" class="form-select form-select-sm">
+                                            <select id="attacker-dice" style="height:1.8rem;" class="form-select form-select-sm">
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
                                                 <option value="3">3</option>
                                             </select>
                                         </td>
                                         <td>
-                                            <select id="defender-dice" class="form-select form-select-sm">
+                                            <select id="defender-dice" style="height:1.8rem;" class="form-select form-select-sm">
                                                 <option value="1">1</option>
                                                 <option value="2">2</option>
                                             </select>
                                         </td>
                                     </tr>
                                     <tr>
-                                        <th class="text-end">Rolls 🏹</th>
+                                        <th class="text-end">Rolls ⚔️</th>
                                         <td class="text-center fw-bold" id="attacker-rolls"></td>
                                         <td class="text-center fw-bold" id="defender-rolls"></td>
                                     </tr>
@@ -110,7 +110,7 @@
                                     </tr>
                                     <tr class="text-center">
                                         <td colspan="3">
-                                            <small class="fst-italic text-muted"><span style="color:#430000;">*</span>If a player has a leader or a fortress.</small>
+                                            <small class="fst-italic text-muted"><span style="color:#430000;">*</span>Enable if a player has a leader or a fortress.</small>
                                         </td>
                                     </tr>
                                 </tbody>
@@ -161,8 +161,8 @@
             }
         }
 
-        const attackerRollsText = `${attackerRolls.join(", ")}`;
-        const defenderRollsText = `${defenderRolls.join(", ")}`;
+        const attackerRollsText = `${attackerRolls.join(" | ")}`;
+        const defenderRollsText = `${defenderRolls.join(" | ")}`;
         document.getElementById("attacker-rolls").textContent = attackerRollsText;
         document.getElementById("defender-rolls").textContent = defenderRollsText;
 
