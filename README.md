@@ -4,7 +4,7 @@ A responsive single-file application created with HTML, JavaScript, and Bootstra
 
 | Interface | Simulated Battle |
 |:-------------------------:|:-------------------------:|
-| <a target="_blank" rel="noreferrer"> <img src="https://github.com/G-C-Code/lotr-risk-battle-simulator/Screenshots/Screenshot0.png" width="230" height="230"/> </a> | <a target="_blank" rel="noreferrer"> <img src="https://github.com/G-C-Code/lotr-risk-battle-simulator/Screenshots/Screenshot1.png" width="230" height="230"/> </a> |
+| <a target="_blank" rel="noreferrer"> <img src="https://github.com/G-C-Code/lotr-risk-battle-simulator/blob/main/Screenshots/Screenshot0.png" width="230" height="230"/> </a> | <a target="_blank" rel="noreferrer"> <img src="https://github.com/G-C-Code/lotr-risk-battle-simulator/blob/main/Screenshots/Screenshot1.png" width="230" height="230"/> </a> |
 
 ## Features
 - Single file: Just download the HTML file, open it in the web browser of your choice and you are ready to go.
