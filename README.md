@@ -19,8 +19,8 @@ To experience any of the single-file projects:
 
 ### Links:
 - [CodeGems](https://github.com/G-C-Code/single-files/blob/main/CodeGems/code-gems.html)
-- [Tic-Tac-Toe](https://github.com/G-C-Code/single-files/blob/main/TicTacToe/tictactoe.html)
-- [LoTRRiskBattleSimulator](https://github.com/G-C-Code/single-files/blob/main/LoTRRiskBattleSimulator/lotrriskbattlesimulator.html)
+- [Tic-Tac-Toe](https://github.com/G-C-Code/single-files/blob/main/TicTacToe/tic-tac-toe.html)
+- [LoTRRiskBattleSimulator](https://github.com/G-C-Code/single-files/blob/main/LoTRRiskBattleSimulator/lotr-risk-battle-simulator.html)
 - [Stopwatch](https://github.com/G-C-Code/single-files/blob/main/Stopwatch/stopwatch.html)
 
 ---
